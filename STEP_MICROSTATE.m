@@ -7,7 +7,18 @@ function next_state = STEP_MICROSTATE(cur_state)
     % q_y
     next_state(2) = cur_state(2) + cur_state(4);
     % p_x
-    next_state(3) = rand(1)*2 - 1;
+    next_state(3) = round(rand(1)*2 - 1);
     % p_y
-    next_state(4) = rand(1)*2 - 1;
+    next_state(4) = round(rand(1)*2 - 1);
+    
+    if     next_state(1)<0
+        next_state(1) = 0;
+    elseif next_state(2) < 0
+        next_state(2) = 0;
+    elseif next_state(1) > 3
+        next_state(1) = 3;
+    elseif next_state(2) > 3
+        next_state(2) = 3;
+    end
+    
 end
