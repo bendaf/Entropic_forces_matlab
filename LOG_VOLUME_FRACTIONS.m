@@ -29,4 +29,4 @@ for i=1:size(starting_steps,1)
 %                                               / count_steps(index,1);
 %     pl = [starting_steps(i,:) log_volume_fracs(i)]
 end
-s = sum(log_volume_fracs)
+s = sum(log_volume_fracs);
