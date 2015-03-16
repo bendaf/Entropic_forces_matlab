@@ -21,4 +21,13 @@ function next_state = STEP_MICROSTATE(cur_state)
         next_state(2) = 3;
     end
     
+    if next_state(1) > 1 && next_state(1) < 2 
+        next_state(1) = round(next_state(1));
+    elseif next_state(2)>1 && next_state(2)<2 
+        if next_state(2)<1.5
+            next_state(2)=1;
+        else
+            next_state(2)=2;
+        end
+    end
 end

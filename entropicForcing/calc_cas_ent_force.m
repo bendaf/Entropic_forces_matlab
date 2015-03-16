@@ -26,5 +26,5 @@ function cas_ent_force = calc_cas_ent_force(cur_macrostate, ...
     end
     
     %cas_ent_force = 2* (T_c / T_r) * (1.0 / num_sample_path) * force;
-    cas_ent_force = force/num_sample_path;
+    cas_ent_force = 2 * force/num_sample_path;
 end
